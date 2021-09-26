@@ -1,0 +1,93 @@
+html {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+header.header {
+  background-color: rgba(0, 0, 0, 0.61);
+  padding: 1vw;
+}
+
+header.header h1 {
+  text-align: center;
+  color: #fff;
+}
+
+section.container {
+  width: 100%;
+  max-width: 500px;
+  display: block;
+  margin: 0 auto;
+}
+
+section.container form.form {
+  display: flex;
+  flex-direction: column;
+}
+
+section.container form.form div.form-body {
+  padding-top: 1vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+section.container form.form div.form-body div.form-itens {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+  align-items: center;
+  margin: 0 auto;
+}
+
+section.container form.form div.form-body div.form-itens label {
+  color: rgba(0, 0, 0, 0.61);
+  padding-top: .5vw;
+  min-width: 60px;
+  width: 100%;
+}
+
+section.container form.form div.form-body div.form-itens input {
+  border: 1px solid rgba(0, 0, 0, 0.61);
+  border-radius: 5px;
+  padding: .5vw;
+  min-width: 60px;
+  width: 100%;
+}
+
+section.container form.form button[type="submit"] {
+  border-radius: 5px;
+  background: rgba(0, 0, 0, 0.61);
+  padding: .5vw 1.5vw;
+  margin-top: .5vw;
+  margin-right: .2vw;
+  color: #fff;
+  border: none;
+  align-self: flex-end;
+  cursor: pointer;
+}
+
+footer.footer {
+  background-color: rgba(0, 0, 0, 0.61);
+  padding: 1vw;
+  margin-top: 1vw;
+}
+
+footer.footer p {
+  text-align: center;
+  color: #fff;
+}
+
+
+
+
+
