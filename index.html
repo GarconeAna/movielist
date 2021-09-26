@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Movie List</title>
+</head>
+<body>
+  <header class="header">
+    <h1>Meus filmes favoritos</h1>
+  </header>
+
+  <section class="container">
+    <form class="form">
+      <div class="form-body">
+        <div class="form-itens">
+          <label for="nome">Nome:</label>
+          <input id="nome" type="text" placeholder="Ex: Harry Potter">
+        </div>
+        <div class="form-itens">
+          <label for="genero">Gênero:</label>
+          <input id="genero" type="text" placeholder="Ex: Fantasia">
+        </div>
+        <div class="form-itens">
+          <label for="imagem">Imagem:</label>
+          <input id="imagem" type="text" placeholder="URL da imagem">
+        </div>
+        <div class="form-itens">
+          <label for="nota">Nota:</label>
+          <input id="nota" type="text" placeholder="0 a 10">
+        </div> 
+      </div>
+      <button type="submit">Enviar</button>  
+    </form>
+  </section>
+
+  <section class="box-movies">
+    <div class="movie-list">
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>Desenvolvido em aula por Ana Carolina</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
