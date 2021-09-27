@@ -39,6 +39,11 @@ form.addEventListener('submit', (evento) => {
 
   if (nome !== '' && genero !== '' && imagem !== '' && nota !== '') {
     addMovie(nome, imagem, genero, nota);
+    inputNome.value = '';
+    inputGenero.value = '';
+    inputImagem.value = '';
+    inputNota.value = '';
+    inputNome.focus();
   }
 });
 
