@@ -53,27 +53,34 @@ const renderMovie = (movie) => {
   const listItens = document.createElement('div');
   listItens.setAttribute('class', 'list-itens');
 
-  const listNome = document.createElement('h2');
-  listNome.setAttribute('class', 'list-nome');
+  // const listNome = document.createElement('h2');
+  // listNome.setAttribute('class', 'list-nome');
 
-  const listImg = document.createElement('img');
-  listImg.setAttribute('src', movie.imagem);
+  // const listImg = document.createElement('img');
+  // listImg.setAttribute('src', movie.imagem);
 
-  const listGenero = document.createElement('span');
-  listGenero.setAttribute('class', 'list-span');
+  // const listGenero = document.createElement('span');
+  // listGenero.setAttribute('class', 'list-span');
 
-  const listNota = document.createElement('span');
-  listNota.setAttribute('class', 'list-span-nota');
+  // const listNota = document.createElement('span');
+  // listNota.setAttribute('class', 'list-span-nota');
 
 
-  listNome.innerHTML = movie.nome;
-  listGenero.innerHTML = movie.genero;
-  listNota.innerHTML = movie.nota;
+  // listNome.innerHTML = movie.nome;
+  // listGenero.innerHTML = movie.genero;
+  // listNota.innerHTML = movie.nota;
 
-  listItens.append(listNome);
-  listItens.append(listImg);
-  listItens.append(listGenero);
-  listItens.append(listNota);
+  listItens.innerHTML = `
+    <h2>${movie.nome}</h2>
+    <img src=${movie.imagem}>
+    <span>${movie.genero}</span>
+    <span>${movie.nota}</span>
+  `
+
+  // listItens.append(listNome);
+  // listItens.append(listImg);
+  // listItens.append(listGenero);
+  // listItens.append(listNota);
   list.append(listItens);
 
 }
