@@ -76,6 +76,78 @@ section.container form.form button[type="submit"] {
   cursor: pointer;
 }
 
+section.box-movies div.js-movie-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+section.box-movies div.js-movie-list div.list-itens {
+  border: 1px solid rgba(0, 0, 0, 0.61);
+  border-radius: 5px;
+  margin: 3vw 2vw;
+  max-height: 700px;
+  padding: 0vw 2vw;
+}
+
+section.box-movies div.js-movie-list div.list-itens h2 {
+  text-align: center;
+  height: 50px;
+  padding: .5vw 0;
+  color: rgba(0, 0, 0, 0.61);
+  font-size: 1.2rem;
+  background-color: #fff;
+}
+
+section.box-movies div.js-movie-list div.list-itens button {
+  padding: 1vw 0;
+  margin-left: 2vw;
+  float: right;
+  border: none;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+section.box-movies div.js-movie-list div.list-itens button i {
+  font-size: 2vw;
+}
+
+section.box-movies div.js-movie-list div.list-itens img {
+  display: block;
+  margin: 0 auto;
+  max-width: 500px;
+  max-height: 400px;
+  min-height: 400px;
+}
+
+section.box-movies div.js-movie-list div.list-itens div.genero-nota {
+  padding: 1vw 0;
+  display: flex;
+}
+
+section.box-movies div.js-movie-list div.list-itens div.genero-nota p {
+  padding: 1vw;
+  border: 1px solid rgba(0, 0, 0, 0.61);
+  color: rgba(0, 0, 0, 0.61);
+  border-radius: 5px;
+  width: 60%;
+  height: 50%;
+  text-align: center;
+}
+
+section.box-movies div.js-movie-list div.list-itens div.genero-nota span {
+  display: block;
+  margin: 0 auto;
+  font-size: 3vw;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.61);
+}
+
+section.box-movies div.js-movie-list div.list-itens input[type="checkbox"] {
+  display: none;
+}
+
 footer.footer {
   background-color: rgba(0, 0, 0, 0.61);
   padding: 1vw;
@@ -86,6 +158,8 @@ footer.footer p {
   text-align: center;
   color: #fff;
 }
+
+
 
 
 

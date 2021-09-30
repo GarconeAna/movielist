@@ -52,6 +52,7 @@ const renderMovie = (movie) => {
 
   const listItens = document.createElement('div');
   listItens.setAttribute('class', 'list-itens');
+  listItens.setAttribute('data-key', movie.id);
 
   // const listNome = document.createElement('h2');
   // listNome.setAttribute('class', 'list-nome');
@@ -71,10 +72,15 @@ const renderMovie = (movie) => {
   // listNota.innerHTML = movie.nota;
 
   listItens.innerHTML = `
+    <input id=${movie.id} type="checkbox"/>
+    <label for=${movie.id} class="check"></label>
+    <button class="delete-icon"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
     <h2>${movie.nome}</h2>
     <img src=${movie.imagem}>
-    <span>${movie.genero}</span>
-    <span>${movie.nota}</span>
+    <div class="genero-nota">
+      <p>${movie.genero}</p>
+      <span>${movie.nota}</span>
+    </div>
   `
 
   // listItens.append(listNome);
