@@ -12,13 +12,13 @@ body {
 }
 
 header.header {
-  background-color: rgba(0, 0, 0, 0.61);
+  background-color: #f5df4d;
   padding: 1vw;
 }
 
 header.header h1 {
   text-align: center;
-  color: #fff;
+  color: #1b264f;
 }
 
 section.container {
@@ -50,14 +50,14 @@ section.container form.form div.form-body div.form-itens {
 }
 
 section.container form.form div.form-body div.form-itens label {
-  color: rgba(0, 0, 0, 0.61);
+  color: #939597;
   padding-top: .5vw;
   min-width: 60px;
   width: 100%;
 }
 
 section.container form.form div.form-body div.form-itens input {
-  border: 1px solid rgba(0, 0, 0, 0.61);
+  border: 1px solid #939597;
   border-radius: 5px;
   padding: .5vw;
   min-width: 60px;
@@ -66,7 +66,7 @@ section.container form.form div.form-body div.form-itens input {
 
 section.container form.form button[type="submit"] {
   border-radius: 5px;
-  background: rgba(0, 0, 0, 0.61);
+  background: #939597;
   padding: .5vw 1.5vw;
   margin-top: .5vw;
   margin-right: .2vw;
@@ -84,7 +84,8 @@ section.box-movies div.js-movie-list {
 }
 
 section.box-movies div.js-movie-list div.list-itens {
-  border: 1px solid rgba(0, 0, 0, 0.61);
+  background-color: #f5df4d;
+  border: 1px solid #939597;
   border-radius: 5px;
   margin: 3vw 2vw;
   max-height: 700px;
@@ -94,10 +95,10 @@ section.box-movies div.js-movie-list div.list-itens {
 section.box-movies div.js-movie-list div.list-itens h2 {
   text-align: center;
   height: 50px;
-  padding: .5vw 0;
-  color: rgba(0, 0, 0, 0.61);
-  font-size: 1.2rem;
-  background-color: #fff;
+  padding-top: 1vw;
+  color: #1b264f;
+  font-size: 1.5vw;
+  background-color: #f5df4d;
 }
 
 section.box-movies div.js-movie-list div.list-itens button {
@@ -105,15 +106,17 @@ section.box-movies div.js-movie-list div.list-itens button {
   margin-left: 2vw;
   float: right;
   border: none;
-  background-color: #fff;
+  background-color: #f5df4d;
   cursor: pointer;
 }
 
 section.box-movies div.js-movie-list div.list-itens button i {
   font-size: 2vw;
+  color: #1b264f;
 }
 
 section.box-movies div.js-movie-list div.list-itens img {
+  background-color: #fff;
   display: block;
   margin: 0 auto;
   max-width: 500px;
@@ -128,8 +131,9 @@ section.box-movies div.js-movie-list div.list-itens div.genero-nota {
 
 section.box-movies div.js-movie-list div.list-itens div.genero-nota p {
   padding: 1vw;
-  border: 1px solid rgba(0, 0, 0, 0.61);
-  color: rgba(0, 0, 0, 0.61);
+  border: 1px solid #fff;
+  background-color: #939597;
+  color: #fff;
   border-radius: 5px;
   width: 60%;
   height: 50%;
@@ -141,7 +145,7 @@ section.box-movies div.js-movie-list div.list-itens div.genero-nota span {
   margin: 0 auto;
   font-size: 3vw;
   font-weight: 700;
-  color: rgba(0, 0, 0, 0.61);
+  color: #1b264f;
 }
 
 section.box-movies div.js-movie-list div.list-itens input[type="checkbox"] {
@@ -149,14 +153,14 @@ section.box-movies div.js-movie-list div.list-itens input[type="checkbox"] {
 }
 
 footer.footer {
-  background-color: rgba(0, 0, 0, 0.61);
+  background-color: #f5df4d;
   padding: 1vw;
   margin-top: 1vw;
 }
 
 footer.footer p {
   text-align: center;
-  color: #fff;
+  color: #1b264f;
 }
 
 
