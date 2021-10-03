@@ -4,25 +4,9 @@ const router = express.Router();
 const movies = [
   {
     id: Date.now(),
-    nome: "Harry Potter teste1",
-    imagem: "https://cromasolutions.com.br/wp-content/uploads/2019/02/4-1.png",
-    genero: "Fantasia teste1",
-    nota: "8",
-    checked: false
-  },
-  {
-    id: Date.now(),
-    nome: "Harry Potter teste2",
-    imagem: "https://cromasolutions.com.br/wp-content/uploads/2019/02/4-1.png",
-    genero: "Fantasia teste2",
-    nota: "8",
-    checked: false
-  },
-  {
-    id: Date.now(),
-    nome: "Harry Potter teste3",
-    imagem: "https://cromasolutions.com.br/wp-content/uploads/2019/02/4-1.png",
-    genero: "Fantasia teste3",
+    nome: "Harry Potter",
+    imagem: "https://br.web.img3.acsta.net/medias/nmedia/18/95/59/60/20417256.jpg",
+    genero: "Fantasia",
     nota: "8",
     checked: false
   },
