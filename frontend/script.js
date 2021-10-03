@@ -7,24 +7,10 @@
 //   checked: false
 // }];
 
+const url = 'http://localhost:3000/movies';
 const movieItens = [];
 
-const addMovie = (nome, imagem, genero, nota) => {
-  const movie = {
-    nome: nome,
-    imagem: imagem,
-    genero: genero,
-    nota: nota,
-    id: Date.now(),
-    checked: false
-  }
-
-  movieItens.push(movie);
-  renderMovie(movie);
-}
-
-const form = document.querySelector('.form');
-form.addEventListener('submit', (evento) => {
+const form = async (evento) => {
   evento.preventDefault();
 
   const inputNome = document.querySelector('#nome');
@@ -32,61 +18,55 @@ form.addEventListener('submit', (evento) => {
   const inputImagem = document.querySelector('#imagem');
   const inputNota = document.querySelector('#nota');
 
-  const nome = inputNome.value;
-  const genero = inputGenero.value;
-  const imagem = inputImagem.value;
-  const nota = inputNota.value;
+  const movie = {
+    nome: inputNome.value,
+    genero: inputGenero.value,
+    imagem: inputImagem.value,
+    nota: inputNota.value,  
+  }
 
-  if (nome !== '' && genero !== '' && imagem !== '' && nota !== '') {
-    addMovie(nome, imagem, genero, nota);
+  const request = new Request(`${url}/add`, {
+    method: 'POST',
+    body: JSON.stringify(movie),
+    headers: new Headers({
+      'Content-Type': 'application/json'
+    })
+  });
+
+  const response = await fetch(request);
+  const result = await response.json();
+  if(result) {
+    getMovies();
     inputNome.value = '';
     inputGenero.value = '';
     inputImagem.value = '';
     inputNota.value = '';
     inputNome.focus();
   }
-});
+  
+}
 
-const renderMovie = (movie) => {
+const getMovies = async () => {
+  const response = await fetch(url);
+  const data = await response.json();
+  console.log(data)
+
   const list = document.querySelector('.js-movie-list');
 
-  const listItens = document.createElement('div');
-  listItens.setAttribute('class', 'list-itens');
-  listItens.setAttribute('data-key', movie.id);
-
-  // const listNome = document.createElement('h2');
-  // listNome.setAttribute('class', 'list-nome');
-
-  // const listImg = document.createElement('img');
-  // listImg.setAttribute('src', movie.imagem);
-
-  // const listGenero = document.createElement('span');
-  // listGenero.setAttribute('class', 'list-span');
-
-  // const listNota = document.createElement('span');
-  // listNota.setAttribute('class', 'list-span-nota');
-
-
-  // listNome.innerHTML = movie.nome;
-  // listGenero.innerHTML = movie.genero;
-  // listNota.innerHTML = movie.nota;
-
-  listItens.innerHTML = `
-    <input id=${movie.id} type="checkbox"/>
-    <label for=${movie.id} class="check"></label>
-    <button class="delete-icon"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
-    <h2>${movie.nome}</h2>
-    <img src=${movie.imagem}>
-    <div class="genero-nota">
-      <p>${movie.genero}</p>
-      <span>${movie.nota}</span>
+  data.map((movie) => {
+    list.insertAdjacentHTML('beforeend', `
+    <div class="list-itens" data-key=${movie.id}>
+      <input id=${movie.id} type="checkbox"/>
+      <label for=${movie.id} class="check"></label>
+      <button class="delete-icon"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+      <h2>${movie.nome}</h2>
+      <img src=${movie.imagem}>
+      <div class="genero-nota">
+        <p>${movie.genero}</p>
+        <span>${movie.nota}</span>
+      </div>
     </div>
-  `
-
-  // listItens.append(listNome);
-  // listItens.append(listImg);
-  // listItens.append(listGenero);
-  // listItens.append(listNota);
-  list.append(listItens);
-
+  `)
+  }) 
 }
+getMovies();
