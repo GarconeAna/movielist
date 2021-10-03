@@ -5,25 +5,25 @@ const movies = [
   {
     id: Date.now(),
     nome: "Harry Potter teste1",
-    imagem: "URL DA IMAGEM teste1",
+    imagem: "https://cromasolutions.com.br/wp-content/uploads/2019/02/4-1.png",
     genero: "Fantasia teste1",
-    nota: "8 teste1",
+    nota: "8",
     checked: false
   },
   {
     id: Date.now(),
     nome: "Harry Potter teste2",
-    imagem: "URL DA IMAGEM teste2",
+    imagem: "https://cromasolutions.com.br/wp-content/uploads/2019/02/4-1.png",
     genero: "Fantasia teste2",
-    nota: "8 teste2",
+    nota: "8",
     checked: false
   },
   {
     id: Date.now(),
     nome: "Harry Potter teste3",
-    imagem: "URL DA IMAGEM teste3",
+    imagem: "https://cromasolutions.com.br/wp-content/uploads/2019/02/4-1.png",
     genero: "Fantasia teste3",
-    nota: "8 teste3",
+    nota: "8",
     checked: false
   },
 ]
