@@ -103,7 +103,7 @@ section.box-movies div.js-movie-list div.list-itens h2 {
 
 section.box-movies div.js-movie-list div.list-itens button {
   padding: 1vw 0;
-  margin-left: 2vw;
+  margin-left: .5vw;
   float: right;
   border: none;
   background-color: #f5df4d;
