@@ -1,2 +1,2 @@
 # movielist
-Projeto com JavaScript puro.
+Projeto 01 MOD3.
