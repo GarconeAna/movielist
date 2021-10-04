@@ -1,15 +1,38 @@
+// modelo do json para add (para o thunder ou formulario)
+// {
+//   "nome": "Round 6/Squid Game",
+//   "imagem": "https://br.web.img3.acsta.net/c_310_420/pictures/21/09/14/18/49/5442347.jpg",
+//   "genero": "Suspense",
+//   "nota": "10"
+// }
+// {
+//   "nome": "O bebê de Rosemary",
+//   "imagem": "https://br.web.img2.acsta.net/c_310_420/medias/nmedia/18/94/42/79/20328732.jpg",
+//   "genero": "Terror",
+//   "nota": "10"
+// }
+// {
+//   "nome": "Star Wars: A Vingança dos Sith",
+//   "imagem": "https://br.web.img2.acsta.net/c_310_420/medias/nmedia/18/92/58/33/20207204.jpg",
+//   "genero": "Ficção Científica",
+//   "nota": "10"
+// }
+
+
+
+
 const express = require('express');
 const router = express.Router();
 
 const movies = [
-  {
-    id: Date.now(),
-    nome: "Harry Potter",
-    imagem: "https://br.web.img3.acsta.net/medias/nmedia/18/95/59/60/20417256.jpg",
-    genero: "Fantasia",
-    nota: "8",
-    checked: false
-  },
+  // {
+  //   id: Date.now(),
+  //   nome: "Harry Potter",
+  //   imagem: "https://br.web.img3.acsta.net/medias/nmedia/18/95/59/60/20417256.jpg",
+  //   genero: "Fantasia",
+  //   nota: "8",
+  //   checked: false
+  // },
 ]
 
 router.get('/', (req, res) => {
