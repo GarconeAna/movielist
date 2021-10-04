@@ -95,7 +95,7 @@ section.box-movies div.js-movie-list div.list-itens {
 section.box-movies div.js-movie-list div.list-itens h2 {
   text-align: center;
   height: 50px;
-  padding-top: 1vw;
+  padding: 1vw 0;
   color: #1b264f;
   font-size: 1.5vw;
   background-color: #f5df4d;
@@ -110,18 +110,23 @@ section.box-movies div.js-movie-list div.list-itens button {
   cursor: pointer;
 }
 
-section.box-movies div.js-movie-list div.list-itens button i {
+section.box-movies div.js-movie-list div.list-itens button.icon i {
   font-size: 2vw;
   color: #1b264f;
 }
 
-section.box-movies div.js-movie-list div.list-itens img {
+section.box-movies div.js-movie-list div.list-itens div.movie-view img {
   background-color: #fff;
   display: block;
   margin: 0 auto;
-  max-width: 500px;
+  min-width: 300px;
   max-height: 400px;
   min-height: 400px;
+}
+
+section.box-movies div.js-movie-list div.list-itens div.movie-view button.icon-view i {
+  margin: 0 auto;
+  font-size: 3vw;
 }
 
 section.box-movies div.js-movie-list div.list-itens div.genero-nota {

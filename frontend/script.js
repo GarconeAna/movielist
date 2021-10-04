@@ -17,6 +17,7 @@ const inputNome = document.querySelector('#nome');
 const inputGenero = document.querySelector('#genero');
 const inputImagem = document.querySelector('#imagem');
 const inputNota = document.querySelector('#nota');
+// const inputChecket = document.querySelector('#checket');
 
 const getMovies = async () => {
   const response = await fetch(url);
@@ -24,14 +25,15 @@ const getMovies = async () => {
   console.log(data)
 
   const list = document.querySelector('.js-movie-list');
+  // const divIcons = document.querySelector('.list-icon');
 
   data.map((movie) => {
     list.insertAdjacentHTML('beforeend', `
     <div class="list-itens" data-key=${movie.id}>
-      <input id=${movie.id} type="checkbox"/>
-      <label for=${movie.id} class="check"></label>
-      <button onclick="deleteMovie(${movie.id})" class="delete-icon"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
-      <button onclick="putMovie(${movie.id})" class="delete-icon"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+      <div class="list-icon">
+        <button onclick="deleteMovie(${movie.id})" class="icon"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+        <button onclick="putMovie(${movie.id})" class="icon"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+      </div>
       <h2>${movie.nome}</h2>
       <img src=${movie.imagem}>
       <div class="genero-nota">
@@ -40,7 +42,21 @@ const getMovies = async () => {
       </div>
     </div>
   `)
-  }) 
+  })
+
+  // if(inputChecket.value === 'checket-true'){
+  //   icon = `<i class="fa fa-eye" aria-hidden="true"></i>`
+  //   divIcons.insertAdjacentHTML('beforeend', `
+  //     <button class="icon">${icon}</button>
+  //   `)
+  // }
+  // if(inputChecket.value === 'checket-false'){
+  //   icon = `<i class="fa fa-eye-slash" aria-hidden="true"></i>`
+  //   divIcons.insertAdjacentHTML('beforeend', `
+  //     <button class="icon">${icon}</button>
+  //   `)
+  // }
+
 }
 
 getMovies();
@@ -58,7 +74,8 @@ const form = async (evento) => {
     nome: inputNome.value,
     genero: inputGenero.value,
     imagem: inputImagem.value,
-    nota: inputNota.value,  
+    nota: inputNota.value, 
+    // checked: inputChecket.value, 
   }
 
   if(!edit) {
@@ -100,6 +117,7 @@ const form = async (evento) => {
   
 }
 
+
 const putMovie = async (id) => {
   edit = true;
   idEdit = id;
@@ -111,6 +129,8 @@ const putMovie = async (id) => {
   inputGenero.value = movie.genero;
   inputImagem.value = movie.imagem;
   inputNota.value = movie.nota;
+  // inputChecket.value = movie.checked;
+  inputNome.focus();
 
 }
 
