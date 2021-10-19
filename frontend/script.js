@@ -7,7 +7,7 @@
 //   checked: false
 // }];
 
-const url = 'http://localhost:3000/movies';
+const url = 'http://localhost:3001/movies';
 const movieItens = [];
 let edit = false;
 let idEdit = 0;
@@ -29,10 +29,10 @@ const getMovies = async () => {
 
   data.map((movie) => {
     list.insertAdjacentHTML('beforeend', `
-    <div class="list-itens" data-key=${movie.id}>
+    <div class="list-itens" data-key=${movie._id}>
       <div class="list-icon">
-        <button onclick="deleteMovie(${movie.id})" class="icon"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
-        <button onclick="putMovie(${movie.id})" class="icon"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+        <button onclick="deleteMovie('${movie._id}')" class="icon"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+        <button onclick="putMovie('${movie._id}')" class="icon"><i class="fa fa-pencil" aria-hidden="true"></i></button>
       </div>
       <h2>${movie.nome}</h2>
       <img src=${movie.imagem}>
@@ -90,6 +90,7 @@ const form = async (evento) => {
     const res = await fetch(req);
     const result = await res.json();
     if(result) {
+      edit = false;
       getMovies();
     }    
   } else {
@@ -135,12 +136,12 @@ const putMovie = async (id) => {
 }
 
 const deleteMovie = async (id) => {
-  const list = document.querySelector('.js-movie-list');
   const req = new Request(`${url}/${id}`, {
     method: 'DELETE',
   })
   const res = await fetch(req);
   const data = await res.json();
+  console.log(data.message);
 
   list.innerHTML = '';
   getMovies();
